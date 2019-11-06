@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element name="bibliotheque" xmlns="http://relaxng.org/ns/structure/1.0">
+    <oneOrMore>
+        <element name="etagere">
+            <attribute name="type"/>
+            <attribute name="poussiere"/>
+                <oneOrMore>
+                    <element name="livre">
+                        <attribute name="isbn"/>
+                        <attribute name="prix"/>
+                        <element name="titre">
+                            <element name="auteur">
+                                <zeroOrMore>
+                                    <attribute name="prenom"/> 
+                                </zeroOrMore>
+                                <attribute name="nom"/>
+                            </element>
+                        </element>
+                </element>
+            </oneOrMore>        
+        </element>
+    </oneOrMore>
+</element>
